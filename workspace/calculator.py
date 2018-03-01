@@ -64,9 +64,7 @@ def remove_brackets(str1):
     # 合并去除一层括号的新算式
     str1 = '{0}{1}{2}'.format(t_1[0], str1, t_2[2])
     # 继续去除括号
-    str1 = remove_brackets(str1)
-    assert type(str1) is str
-    return str1
+    return remove_brackets(str1)
 
 
 def isdigital(str1):
@@ -425,7 +423,7 @@ def cal(str1):
     str1 = simple_op(str1)
     #检查（）的合法性
     str1 = check_brackets(str1)
-    assert type(str1) is str
+    #计算去除括号后的算式
     str1 = remove_brackets(str1)
-    assert type(str1) is str
+
     return str1
