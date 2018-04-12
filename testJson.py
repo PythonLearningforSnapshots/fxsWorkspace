@@ -1,5 +1,5 @@
 import json
-
+#import this
 
 def writerex(f1,str1):
     with open(f1,'w',encoding='utf-8') as f:

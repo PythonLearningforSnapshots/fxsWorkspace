@@ -78,13 +78,13 @@ def process(line, filetype, text_col):
     如果是None，说明文件分析失败
 
     '''
-    if filetype is 'CSV':
+    if filetype == 'CSV':
         key_ls = line.split(',')
         # 排除文件中不符合规则的行
         if len(key_ls) < text_col:
             return '\n'
         # 检验关键字是否含有文件结尾符'\n'
-        if key_ls[text_col - 1][-1] is '\n':
+        if key_ls[text_col - 1][-1] == '\n':
             return key_ls[text_col - 1]
         else:
             return '{0}{1}'.format(key_ls[text_col - 1], '\n')

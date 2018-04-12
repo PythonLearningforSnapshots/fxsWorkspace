@@ -36,7 +36,7 @@ def keyprocess(line,filetype,col):
     output::
     :return: calss str, keywords
     '''
-    if filetype is 'CSV':
+    if filetype == 'CSV':
         key_ls = line.split(',')
     elif 'KSV' in filetype:
         key_ls = line.split(filetype.split('_')[1])
@@ -47,7 +47,7 @@ def keyprocess(line,filetype,col):
         return '\n'
 
     # 检验关键字是否含有文件结尾符'\n'
-    if key_ls[col - 1][-1] is '\n':
+    if key_ls[col - 1][-1] == '\n':
         return key_ls[col - 1]
     else:
         return '{0}{1}'.format(key_ls[col - 1], '\n')
