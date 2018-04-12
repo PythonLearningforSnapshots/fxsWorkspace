@@ -16,7 +16,7 @@ def fetchmodule(f1,filetype,f2 = 'module.txt'):
     module_dt = {}
 
     try:
-        with open(f1,'r', encoding='utf-8') as fin, open(f2,'a+', encoding='utf-8') as fout:
+        with open(f1,'r', encoding='utf-8',errors='ignore') as fin, open(f2,'a+', encoding='utf-8') as fout:
             filename = f1.split('\\')[-1]
             for line in fin:
                 ret = process(line,filetype)

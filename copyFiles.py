@@ -29,7 +29,7 @@ def multicopy(func):
                 if os.path.isfile(fname):
                     flist.append(fname)
         elif '*' in f1.split('\\')[-1]:
-            rex = f1.split('\\')[-1].replace(r'*',r'[\u4E00-\u9FA5A-Za-z0-9_.]+')
+            rex = f1.split('\\')[-1].replace(r'*',r'[\u4E00-\u9FA5A-Za-z0-9_. ]+')
             lsdir = os.listdir(os.path.dirname(f1))
             for fname in lsdir:
                 if re.search(rex,fname):
