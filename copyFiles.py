@@ -48,7 +48,7 @@ def multicopy(func):
             #判断是否覆盖文件
             if os.path.isfile(f4):
                 select = input('{0}是否覆盖已存在文件{1}？(Y，N)'.format(os.path.basename(f3),os.path.basename(f4)))
-                if select is 'Y':
+                if select is 'yY':
                     pass
                 else:
                     continue
